@@ -1,7 +1,6 @@
 import React from "react"
 import Head from "next/head"
-import Component from "../components/index";
-import { css } from "styled-components";
+import TopPost from "../components/post/top/index";
 
 type Props = {
   title: string
@@ -18,7 +17,7 @@ class App extends React.Component<Props> {
         <Head>
           <title>{this.props.title}</title>
         </Head>
-        <Component/>
+        <TopPost/>
       </>
     )
   }

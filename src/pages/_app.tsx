@@ -1,5 +1,6 @@
 import React from "react"
 import App, { AppContext } from "next/app"
+import Link from 'next/link'
 
 export default class extends App {
   static async getInitialProps({ Component, ctx }: AppContext) {
@@ -13,7 +14,10 @@ export default class extends App {
   render() {
     const { Component, pageProps } = this.props
     return (
-      <Component {...pageProps} />
+      <>
+        <Link href="/"><a>top</a></Link>
+        <Component {...pageProps} />
+      </>
     )
   }
 }
