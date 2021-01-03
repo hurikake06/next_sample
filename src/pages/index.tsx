@@ -8,7 +8,7 @@ type Props = {
 
 class App extends React.Component<Props> {
   static async getInitialProps(): Promise<Props> {
-    return { title: "Hello world" }
+    return { title: 'Next.js Sample' }
   }
 
   render() {

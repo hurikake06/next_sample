@@ -9,7 +9,7 @@ const Post = () => {
 
   return (
     <>
-      <Head><title>記事</title></Head>
+      <Head><title>{`記事${pid}`}</title></Head>
       <SimplePost h1={`記事${pid}`}/>
     </>
   )
