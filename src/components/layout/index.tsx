@@ -1,19 +1,18 @@
-import withStyles from '@material-ui/core/styles/withStyles';
-import decorate from './style'
-import React from 'react';
+import * as React from 'react';
+import withStyles, { WithStyles } from '@material-ui/core/styles/withStyles';
+import styles from './styles'
 
-interface props {
+interface Props extends WithStyles<typeof styles> {
   classes: any,
-  children: any
+  children: any,
+  foo: string
 }
 
-const layout = class extends React.Component<props> {
-  public render() {
-    const { classes, children } = this.props
-    return (
-      <div className={classes.main_content}>LLLL{children}</div>
-    );
-  }
-}
+const Layout = ({ classes, children, foo }: Props) => (
+  <>
+    <div>〜〜〜　コンポーネントごとのレイアウトa　{`aaa:${foo}`}〜〜〜</div>
+    <div className={classes.main_content} style={{ color: 'green' }}>{children}</div>
+  </>
+);
 
-export default decorate(layout);
+export default withStyles(styles)(Layout);
