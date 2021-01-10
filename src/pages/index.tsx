@@ -1,7 +1,7 @@
 /* eslint-disable require-jsdoc */
 import React from 'react';
 import Head from 'next/head';
-import Component from '../components/index';
+import TopPost from '../components/post/top/index';
 
 type Props = {
   title: string
@@ -9,7 +9,7 @@ type Props = {
 
 class App extends React.Component<Props> {
   static async getInitialProps(): Promise<Props> {
-    return {title: 'Hello world'};
+    return {title: 'Next.js Sample'};
   }
 
   render() {
@@ -18,7 +18,7 @@ class App extends React.Component<Props> {
         <Head>
           <title>{this.props.title}</title>
         </Head>
-        <Component/>
+        <TopPost/>
       </>
     );
   }
