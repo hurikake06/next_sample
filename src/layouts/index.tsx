@@ -1,13 +1,15 @@
-import React from "react"
-import { Head, Main, NextScript } from "next/document"
+import React from 'react';
+import {Head, Main, NextScript} from 'next/document';
 
-export default () => (
+const layout = () => (
   <html>
     <Head />
     <body>
-      <div>〜〜〜　全体のレイアウト　〜〜〜</div>
+      <div>〜〜〜全体のレイアウト〜〜〜</div>
       <Main />
       <NextScript />
     </body>
   </html>
-)
+);
+
+export default layout;

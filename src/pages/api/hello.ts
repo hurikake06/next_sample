@@ -1,7 +1,7 @@
-import { NextApiRequest, NextApiResponse } from "next";
+import {NextApiRequest, NextApiResponse} from 'next';
 
 export default (req: NextApiRequest, res: NextApiResponse) => {
-  res.setHeader("content-type", "application/json");
+  res.setHeader('content-type', 'application/json');
   res.status(200);
-  res.end(JSON.stringify({ users: [{ name: "hello" }] }));
+  res.end(JSON.stringify({users: [{name: 'hello'}]}));
 }

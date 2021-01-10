@@ -1,13 +1,14 @@
-import React from "react"
-import Document, { DocumentContext } from "next/document"
-import DefaultLayout from "../layouts/index"
+/* eslint-disable require-jsdoc */
+import React from 'react';
+import Document, {DocumentContext} from 'next/document';
+import DefaultLayout from '../layouts/index';
 
 export default class extends Document {
   static async getInitialProps(ctx: DocumentContext) {
-    const initialProps = await Document.getInitialProps(ctx)
-    return { ...initialProps }
+    const initialProps = await Document.getInitialProps(ctx);
+    return {...initialProps};
   }
   render() {
-    return <DefaultLayout />
+    return <DefaultLayout />;
   }
 }

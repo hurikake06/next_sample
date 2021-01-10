@@ -1,6 +1,7 @@
-import React from "react"
-import Head from "next/head"
-import TopPost from "../components/post/top/index";
+/* eslint-disable require-jsdoc */
+import React from 'react';
+import Head from 'next/head';
+import TopPost from '../components/post/top/index';
 
 type Props = {
   title: string
@@ -8,7 +9,7 @@ type Props = {
 
 class App extends React.Component<Props> {
   static async getInitialProps(): Promise<Props> {
-    return { title: 'Next.js Sample' }
+    return {title: 'Next.js Sample'};
   }
 
   render() {
@@ -19,8 +20,8 @@ class App extends React.Component<Props> {
         </Head>
         <TopPost/>
       </>
-    )
+    );
   }
 }
 
-export default App
+export default App;

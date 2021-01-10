@@ -1,6 +1,7 @@
-import React from "react"
-import { NextPageContext } from "next"
-import Head from "next/head"
+/* eslint-disable require-jsdoc */
+import React from 'react';
+import {NextPageContext} from 'next';
+import Head from 'next/head';
 
 type Props = {
   title: string
@@ -12,7 +13,7 @@ class Error extends React.Component<Props> {
     return {
       title: `Error: ${res!.statusCode}`,
       errorCode: res!.statusCode,
-    }
+    };
   }
 
   render() {
@@ -23,8 +24,8 @@ class Error extends React.Component<Props> {
         </Head>
         {this.props.errorCode}
       </>
-    )
+    );
   }
 }
 
-export default Error
+export default Error;
