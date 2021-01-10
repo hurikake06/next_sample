@@ -1,19 +1,20 @@
-import React from "react"
-import App, { AppContext } from "next/app"
+/* eslint-disable require-jsdoc */
+import React from 'react';
+import App, {AppContext} from 'next/app';
 
 export default class extends App {
-  static async getInitialProps({ Component, ctx }: AppContext) {
-    let pageProps = {}
+  static async getInitialProps({Component, ctx}: AppContext) {
+    let pageProps = {};
     if (Component.getInitialProps) {
-      pageProps = await Component.getInitialProps(ctx)
+      pageProps = await Component.getInitialProps(ctx);
     }
-    return { pageProps }
+    return {pageProps};
   }
 
   render() {
-    const { Component, pageProps } = this.props
+    const {Component, pageProps} = this.props;
     return (
       <Component {...pageProps} />
-    )
+    );
   }
 }

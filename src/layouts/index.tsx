@@ -1,7 +1,7 @@
-import React from "react"
-import { Head, Main, NextScript } from "next/document"
+import React from 'react';
+import {Head, Main, NextScript} from 'next/document';
 
-export default () => (
+const layout = () => (
   <html>
     <Head />
     <body>
@@ -9,4 +9,6 @@ export default () => (
       <NextScript />
     </body>
   </html>
-)
+);
+
+export default layout;
